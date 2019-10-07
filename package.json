@@ -8,6 +8,21 @@
     "name": "ByteSchneiderei GmbH",
     "url": "https://privacy-matters.eu"
   },
+
+  "homepage": "./",
+  "main": "public/electron.js",
+  "scripts": {
+    "test": "echo success",
+    "react-start": "rescripts start",
+    "react-build": "rescripts build",
+    "react-test": "rescripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "build -mw --em.main=build/electron.js",
+    "rebuild": "$(npm bin)/electron-rebuild"
+  },
   "build": {
     "appId": "eu.privacy-matters.pdf-encryption",
     "productName": "PDF Encryption",
@@ -44,21 +59,6 @@
     "directories": {
       "buildResources": "assets"
     }
-  },
-
-  "homepage": "./",
-  "main": "public/electron.js",
-  "scripts": {
-    "test": "echo success",
-    "react-start": "rescripts start",
-    "react-build": "rescripts build",
-    "react-test": "rescripts test",
-    "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "postinstall": "electron-builder install-app-deps",
-    "preelectron-pack": "yarn build",
-    "electron-pack": "build -mw",
-    "rebuild": "$(npm bin)/electron-rebuild"
   },
   "eslintConfig": {
     "extends": "react-app"
