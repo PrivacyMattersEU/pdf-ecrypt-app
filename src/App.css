@@ -1,0 +1,98 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #2f3542;
+  margin: 0px !important;
+  padding: 0px !important;
+  color: white;
+}
+
+.back-button {
+  color: yellow;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.password-input {
+  background-color: #2f3542;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid yellow;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.password-input::placeholder {
+  color: burlywood;
+  font-size: 12px;
+}
+
+.file-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
+  font-size: 1.5em;
+  text-align: center;
+  display: block;
+  overflow: hidden
+}
+
+.top-bar {
+  background-color:  #353b48;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  min-height: 15px;
+  max-height: 15px;
+  flex-direction: row-reverse;
+}
+
+.menu-item {
+  font-size: 0.8em;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2px;
+  letter-spacing: 1.2px;
+  margin-left: 10px;
+  color: #596275;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #2f3542;
+}
+
+.window-title {
+  color: #596275;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.app-text {
+  color: #596275;
+  font-size: 12px;
+}
+
+.files-ul {
+  /* list-style: none; */
+  /* margin: 0px; */
+  /* padding: 0px; */
+  margin-top: 15px;
+}
+
+.files-li {
+  color: #596275;
+  font-size: 12px;
+}
