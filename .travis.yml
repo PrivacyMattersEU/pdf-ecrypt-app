@@ -62,8 +62,8 @@ script:
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
 
-# only run this script on pull requests and merges into 
-# the 'master' branches
-branches:
-  only:
-    - master
+## only run this script on pull requests and merges into
+## the 'master' branches
+#branches:
+#  only:
+#    - master
