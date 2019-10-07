@@ -58,9 +58,10 @@ export default class App extends Component {
         return (
             <div className="container">
                 <div className="top-bar">
-                    <span className="menu-item" onClick={this.showSettings}>Settings</span>
+                    <span className="menu-item" style={{ marginLeft: 0 }} onClick={this.showDropper}>Encrypt</span>
                     <span className="menu-item" onClick={this.showFiles}>Files</span>
-                    <span className="menu-item" onClick={this.showDropper}>Encrypt</span>
+                    <span className="menu-item" onClick={this.showSettings}>Settings</span>
+                    
                 </div>
                 {
                     this.state.isShowingDropper ? 

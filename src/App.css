@@ -54,7 +54,7 @@ body {
   align-items: center;
   min-height: 15px;
   max-height: 15px;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .menu-item {
