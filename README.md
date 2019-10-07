@@ -1,3 +1,5 @@
 ## PDF Encryption App.
 
-Readme to be done !!!
+# Contributers
+* mrfambo
+* tstrohmeier
