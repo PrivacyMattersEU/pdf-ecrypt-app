@@ -22,17 +22,7 @@
       "buildResources": "assets"
     }
   },
-  "dependencies": {
-    "electron-is-dev": "^1.0.1",
-    "hummus-recipe": "^1.8.19",
-    "nedb": "^1.8.0",
-    "qrcode.react": "^0.9.3",
-    "react": "^16.8.3",
-    "react-awesome-button": "^6.1.2",
-    "react-dom": "^16.8.3",
-    "react-lottie": "^1.2.3",
-    "react-scripts": "2.1.5"
-  },
+
   "homepage": "./",
   "main": "public/electron.js",
   "scripts": {
@@ -55,6 +45,17 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "dependencies": {
+    "electron-is-dev": "^1.0.1",
+    "hummus-recipe": "^1.8.19",
+    "nedb": "^1.8.0",
+    "qrcode.react": "^0.9.3",
+    "react": "^16.8.3",
+    "react-awesome-button": "^6.1.2",
+    "react-dom": "^16.8.3",
+    "react-lottie": "^1.2.3",
+    "react-scripts": "2.1.5"
+  },
   "devDependencies": {
     "@rescripts/cli": "^0.0.10",
     "@rescripts/rescript-env": "^0.0.5",
