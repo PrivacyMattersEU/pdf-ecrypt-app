@@ -1,5 +1,5 @@
-## PDF Encryption App.
+# PDF Encryption App.
 
-# Contributers
+## Contributers
 * mrfambo
 * tstrohmeier
