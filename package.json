@@ -4,12 +4,11 @@
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "Ali Muqaddas",
-    "email": "alimuqaddas92@gmail.com",
-    "url": "https://alimuqaddas.com"
+    "name": "ByteSchneiderei GmbH",
+    "url": "https://privacy-matters.eu"
   },
   "build": {
-    "appId": "com.mrfambo.pdf-encryption",
+    "appId": "eu.privacy-matters.pdf-encryption",
     "productName": "PDF Encryption",
     "copyright": "Copyright © 2019 ${author}",
     "mac": {
