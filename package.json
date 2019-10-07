@@ -26,6 +26,7 @@
   "homepage": "./",
   "main": "public/electron.js",
   "scripts": {
+    "test": "echo success",
     "react-start": "rescripts start",
     "react-build": "rescripts build",
     "react-test": "rescripts test",
