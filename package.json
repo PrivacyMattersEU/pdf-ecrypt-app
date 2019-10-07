@@ -3,6 +3,7 @@
   "description": "PDF Encryption App",
   "version": "0.1.0",
   "private": true,
+  "repository": "https://github.com/PrivacyMattersEU/pdf-ecrypt-app",
   "author": {
     "name": "ByteSchneiderei GmbH",
     "url": "https://privacy-matters.eu"
@@ -11,8 +12,30 @@
     "appId": "eu.privacy-matters.pdf-encryption",
     "productName": "PDF Encryption",
     "copyright": "Copyright © 2019 ${author}",
+    "publish": "github",
+    "appImage": {
+      "license": "LICENSE"
+    },
     "mac": {
       "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "nsis": {
+      "createDesktopShortcut": "always",
+      "license": "LICENSE"
     },
     "files": [
       "build/**/*",
