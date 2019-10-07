@@ -21,6 +21,16 @@ install:
       brew install yarn;
     fi
 
+script:
+  - |
+    security create-keychain -p $KEYCHAIN_PASSWORD build.keychain;
+    security default-keychain -s build.keychain;
+    security unlock-keychain -p $KEYCHAIN_PASSWORD build.keychain;
+    echo $KEYSTORE | base64 --decode - > keystore.p12;
+    security import keystore.p12 -k build.keychain -P $KEYCHAIN_PASSWORD -T /usr/bin/codesign;
+    yarn install;
+    yarn electron-pack;
+
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
 
