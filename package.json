@@ -1,7 +1,7 @@
 {
   "name": "pdf-encryption",
-  "description": "PDF Encryption App using Electron",
-  "version": "0.0.1",
+  "description": "PDF Encryption App",
+  "version": "0.1.0",
   "private": true,
   "author": {
     "name": "ByteSchneiderei GmbH",
