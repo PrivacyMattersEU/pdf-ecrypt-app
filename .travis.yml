@@ -52,11 +52,11 @@ script:
         -v ~/.cache/electron:/root/.cache/electron \
         -v ~/.cache/electron-builder:/root/.cache/electron-builder \
         electronuserland/builder:wine \
-        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn test && yarn react-build && yarn electron-pack --linux AppImage --win"
+        /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn test && yarn react-build && yarn electron-pack --linux AppImage --win --publish always"
     else
       yarn test
       yarn react-build
-      yarn electron-pack --mac --publish onTagOrDraft
+      yarn electron-pack --mac --publish always
     fi
 
 
