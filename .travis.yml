@@ -56,7 +56,7 @@ script:
     else
       yarn test
       yarn react-build
-      yarn electron-pack
+      yarn electron-pack --mac --publish onTagOrDraft
     fi
 
 

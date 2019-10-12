@@ -20,7 +20,7 @@
     "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "postinstall": "electron-builder install-app-deps",
     "preelectron-pack": "yarn build",
-    "electron-pack": "build -mw --publish always",
+    "electron-pack": "build -mw",
     "rebuild": "$(npm bin)/electron-rebuild"
   },
   "build": {
