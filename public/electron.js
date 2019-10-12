@@ -7,7 +7,8 @@ const Datastore = require('nedb')
 const path = require('path');
 const isDev = require('electron-is-dev');
 
-const dbFilename = (isDev ? 'records.db' : `${app.getAppPath('userData')}/data/records.db`);
+const dbFilename = (isDev ? 'records.db' : `${app.getPath('userData')}/records.db`);
+console.log("records.db location = ", dbFilename);
 const db = new Datastore({ filename: dbFilename, autoload: true });
 
 
