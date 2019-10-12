@@ -2,11 +2,15 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const ipcMain = require('electron').ipcMain
-var Datastore = require('nedb')
-var db = new Datastore({ filename: 'records.db', autoload: true });
+const Datastore = require('nedb')
 
 const path = require('path');
 const isDev = require('electron-is-dev');
+
+const dbFilename = (isDev ? 'records.db' : `${app.getAppPath('userData')}/data/records.db`);
+const db = new Datastore({ filename: dbFilename, autoload: true });
+
+
 
 let HummusRecipe = require('hummus-recipe')
 
@@ -46,10 +50,10 @@ ipcMain.on('process-pdf', (event, FilePath, FileName, OutputPath, Password) => {
     useHummus(FilePath, OutputPath, FileName, Password, Password)
     db.insert({ FilePath, OutputPath, FileName, Password, timestamp: Date.now(), isPDF: true }, (err, doc) => {
       console.log("Returned:", err, doc)
-    })
+    });
     event.returnValue = { status: true }
   } catch(err) {
-    console.log("Error:", err)
+    console.log("Error:", err);
     event.returnValue = { status: false, err }
   }
   
@@ -57,7 +61,6 @@ ipcMain.on('process-pdf', (event, FilePath, FileName, OutputPath, Password) => {
 
 ipcMain.on('files', (event) => {
   db.find({}, (err, docs) => {
-    console.log('error: docs:', err, docs)
     if(err) {
       console.log('error')
       event.returnValue = { status: false }
@@ -68,8 +71,8 @@ ipcMain.on('files', (event) => {
 })
 
 function useHummus(filePath, outputPath, fileName, userPassword, ownerPassword) {
-  console.log("Saving in:", outputPath, userPassword)
-  let EncryptedFileName = `E-${fileName.split('.')[0]}.pdf`
+  console.log("Saving in:", outputPath);
+  let EncryptedFileName = `E-${fileName.split('.')[0]}.pdf`;
   const pdfDoc = new HummusRecipe(filePath, `${outputPath}/${EncryptedFileName}`);
   pdfDoc.encrypt({
       userPassword,
